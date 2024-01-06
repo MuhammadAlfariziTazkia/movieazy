@@ -1,0 +1,8 @@
+.Carousel-element {
+    background: linear-gradient(90deg, rgba(255,0,0,0), rgb(0, 0, 0));
+    bottom: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

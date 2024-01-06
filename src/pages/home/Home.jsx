@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/navbar/Navbar";
-import getAllMovies from "../Api";
-import MovieCard from "../components/moviecard/MovieCard";
+import Navbar from "../../components/navbar/Navbar";
+import getAllMovies from "../../Api";
+import MovieCard from "../../components/moviecard/MovieCard";
+import "./Home.css";
+import Header from "../../components/carousel/Header";
 
 const Home = () => {
   const [movieList, setMovieList] = useState([]);
@@ -20,8 +22,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      <Header movies={movieList} />
       <div className="p-5">
-        <div className="grid grid-cols-6 gap-4">
+        <div className="Movie-container">
           <MovieListElement />
         </div>
       </div>

@@ -1,18 +1,15 @@
+import "./MovieCard.css";
+
 const MovieCard = (data) => {
-  const imageUrl = `${process.env.REACT_APP_BASE_IMAGE_URL}/${data.movieData.poster_path}`;
   return (
-    <div
-      className="relative w-full h-80 bg-cover bg-center shadow-md"
-      style={{ backgroundImage: `url("${imageUrl}")` }}
-    >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="absolute inset-0 flex flex-col items-start justify-end text-white p-4">
-        <div className="mt-auto">
-          <h2 className="text-lg font-semibold mb-2 text-left">
-            {data.movieData.title}
-          </h2>
-          <p className="text-sm text-left">Deskripsi kartu atau teks lainnya.</p>
+    <div className="Movie-card-wrapper relative p-0 m-2 shadow-lg">
+      <div className="Movie-card-detail mb-0 absolute rounded-b-lg font-semibold mb-2 text-left right-0 left-0 p-5 text-white">
+        <div className="Movie-card-detail-title line-clamp-2">
+        {data.movieData.title}
         </div>
+      </div>
+      <div className="Movie-card-poster">
+        <img src={`${process.env.REACT_APP_BASE_IMAGE_URL}/${data.movieData.poster_path}`} alt="movie-card-poster" className="rounded-lg"/>
       </div>
     </div>
   );

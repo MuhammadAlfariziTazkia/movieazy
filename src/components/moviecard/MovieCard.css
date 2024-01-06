@@ -1,0 +1,9 @@
+.Movie-card-detail {
+    background: linear-gradient(180deg, rgba(255,0,0,0), rgb(4, 0, 255));
+    bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.Movie-card-wrapper {
+    width: 215px;
+}
